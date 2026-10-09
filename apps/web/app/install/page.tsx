@@ -1,0 +1,2 @@
+import { StaticPage } from '../../components/StaticPage';
+export default function InstallPage(){return <StaticPage title="Install SafeScroll" eyebrow="ZERO MODE" paragraphs={["Install the Chrome extension and scan suspicious content on demand.","SafeScroll is designed to keep basic analysis on your device. Enhanced cloud intelligence is opt-in.","Never treat a LOW RISK result as a guarantee of safety."]} />}

@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+:root {
+  --ivory: #f8f4ec;
+  --cream: #f1e8d8;
+  --paper: #fcfaf5;
+  --beige: #e5d7c4;
+  --ink: #211e1a;
+  --muted: #6a5f54;
+  --line: rgba(33, 30, 26, 0.12);
+  --red: #b83a32;
+  --amber: #b47a2a;
+  --green: #5d8065;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--sans, Arial, sans-serif);
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration: none; }
+}
+::selection { background: #d8c7ad; }
+.serif { font-family: Georgia, 'Times New Roman', serif; }
+.paper-noise {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(33,30,26,.04) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 40%, rgba(33,30,26,.03) 0 1px, transparent 1px);
+  background-size: 19px 19px, 23px 23px;
+}
+.fade-grid {
+  background-image: linear-gradient(rgba(33,30,26,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(33,30,26,.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

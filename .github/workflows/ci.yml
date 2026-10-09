@@ -1,0 +1,25 @@
+name: SafeScroll CI
+on: {push: {}, pull_request: {}}
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    defaults: {run: {working-directory: apps/api}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install .
+      - run: python -m compileall app
+      - run: pytest -q
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: {version: 10.14.0}
+      - uses: actions/setup-node@v4
+        with: {node-version: 20, cache: pnpm}
+      - run: pnpm install --frozen-lockfile=false
+      - run: pnpm --filter @safescroll/detection-core build
+      - run: pnpm --filter @safescroll/web typecheck
+      - run: pnpm --filter @safescroll/extension typecheck

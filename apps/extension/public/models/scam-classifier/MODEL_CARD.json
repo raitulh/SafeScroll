@@ -1,0 +1,20 @@
+{
+  "name": "SafeScroll Small Local Scam Classifier",
+  "version": "small-linear-1.0",
+  "type": "hashed-character-logistic",
+  "features": 2048,
+  "ngram_range": [
+    2,
+    5
+  ],
+  "language_support": [
+    "en",
+    "bn"
+  ],
+  "privacy": "on-device",
+  "limitations": [
+    "bootstrap seed training set only",
+    "not sufficient alone for safety-critical decisions",
+    "must be retrained and independently evaluated before public accuracy claims"
+  ]
+}

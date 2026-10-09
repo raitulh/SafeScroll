@@ -1,0 +1,8 @@
+{
+  "version": "2026.10.0",
+  "rules": [
+    {"id":"OTP_REQUEST_001","category":"credential_theft","severity":"high","patterns":["send your otp","share your otp","verification code","security code"]},
+    {"id":"PRIZE_FEE_001","category":"prize_lottery","severity":"high","patterns":["you won","claim your prize","processing fee","service fee"]},
+    {"id":"FAMILY_URGENT_001","category":"family_emergency","severity":"high","patterns":["lost my phone","new number","need money urgently"]}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "model": "small-linear-1.0",
+  "trained_examples": 24,
+  "validation_examples": 6,
+  "temperature": 1.6,
+  "note": "Bootstrap model from repository seed. Retrain on licensed public corpus before production promotion."
+}

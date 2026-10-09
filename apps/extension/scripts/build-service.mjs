@@ -1,0 +1,10 @@
+import { build } from 'esbuild';
+import { cp, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+const root=process.cwd(), dist=path.join(root,'dist');
+await mkdir(dist,{recursive:true});
+await build({entryPoints:[path.join(root,'src/background/service-worker.ts')],outfile:path.join(dist,'background.js'),bundle:true,format:'iife',platform:'browser',target:'es2022'});
+await cp(path.join(root,'manifest.json'),path.join(dist,'manifest.json'));
+await cp(path.join(root,'public/models'),path.join(dist,'models'),{recursive:true});
+await cp(path.join(root,'public/tesseract'),path.join(dist,'tesseract'),{recursive:true});
+console.log('Extension service worker, model and OCR assets copied.');

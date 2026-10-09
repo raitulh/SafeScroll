@@ -1,0 +1,28 @@
+{
+  "name": "safescroll",
+  "private": true,
+  "version": "1.0.0-rc.1",
+  "description": "SafeScroll - privacy-first AI scam detection platform",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {"node": ">=20.18.0"},
+  "scripts": {
+    "dev:web": "pnpm --filter @safescroll/web dev",
+    "dev:admin": "pnpm --filter @safescroll/admin dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "e2e": "playwright test",
+    "security": "pnpm --filter @safescroll/extension test && pytest apps/api/tests -q",
+    "prepare:extension": "pnpm --filter @safescroll/extension prepare:assets",
+    "build:extension": "pnpm --filter @safescroll/extension build",
+    "format": "prettier --write .",
+    "clean": "rimraf **/dist **/.next **/coverage test-results"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.0",
+    "prettier": "3.6.2",
+    "rimraf": "6.0.1",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,2 @@
+import { StaticPage } from '@/components/StaticPage';
+export default function Accessibility(){return <StaticPage eyebrow="Accessibility" title="Warnings should be understandable to everyone."><p>SafeScroll uses large targets, readable typography, plain-language explanations, voice output, high-contrast status labels, and reduced-motion support.</p><p>Color is never the only signal: warnings use both iconography and text such as “SCAM” or “SUSPICIOUS.”</p></StaticPage>}

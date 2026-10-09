@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "types": [
+      "chrome"
+    ],
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src",
+    "scripts"
+  ]
+}

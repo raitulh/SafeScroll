@@ -1,0 +1,33 @@
+{
+  "name": "@safescroll/extension",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "pnpm prepare:assets && vite build && node scripts/build-service.mjs",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "release-check": "node ../../scripts/release-check.mjs",
+    "release": "pnpm prepare:assets && pnpm build && node ../../scripts/release-check.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.7.0",
+    "@safescroll/detection-core": "workspace:*",
+    "lucide-react": "0.544.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "tesseract.js": "6.0.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.1.4",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.4",
+    "esbuild": "0.25.10",
+    "typescript": "5.9.3",
+    "vite": "7.1.9",
+    "vitest": "3.2.4"
+  }
+}

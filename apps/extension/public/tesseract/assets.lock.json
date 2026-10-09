@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "name": "worker.min.js",
+      "url": "https://cdn.jsdelivr.net/npm/tesseract.js@6.0.1/dist/worker.min.js"
+    },
+    {
+      "name": "tesseract-core.wasm.js",
+      "url": "https://cdn.jsdelivr.net/npm/tesseract.js-core@6.0.0/tesseract-core.wasm.js"
+    },
+    {
+      "name": "eng.traineddata.gz",
+      "url": "https://tessdata.projectnaptha.com/4.0.0/eng.traineddata.gz"
+    },
+    {
+      "name": "ben.traineddata.gz",
+      "url": "https://tessdata.projectnaptha.com/4.0.0/ben.traineddata.gz"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js & Build outputs
+.next/
+dist/
+out/
+build/
+
+# Python & ML
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+.venv/
+env/
+venv/
+
+# Environment and Secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# Infrastructure
+terraform.tfstate*
+.terraform/
+
+# Testing & Reports
+test-results/
+playwright-report/
+*.log
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "SafeScroll — Digital Safety Assistant",
+  "description": "Local-first scam detection for messages, pages, screenshots and links.",
+  "version": "1.0.0",
+  "action": {"default_title":"Scan with SafeScroll","default_popup":"index.html"},
+  "permissions": ["activeTab","scripting","storage","contextMenus","tts"],
+  "background": {"service_worker":"background.js","type":"module"},
+  "minimum_chrome_version": "120"
+}

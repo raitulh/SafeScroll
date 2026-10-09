@@ -1,0 +1,2 @@
+import { StaticPage } from '@/components/StaticPage';
+export default function Docs(){return <StaticPage eyebrow="Documentation" title="Build around a calm, explainable safety layer."><p>Start with the repository README, architecture, security, and privacy documents. The shared detection core is the first reusable boundary between the web application, extension, and backend semantics.</p><p>The production roadmap should add signed rule delivery, calibrated model evaluation, richer threat intelligence, caregiver controls, and staged Chrome Web Store rollout.</p></StaticPage>}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('..', import.meta.url));
+const required=['apps/web/app/page.tsx','apps/web/components/HeroOrb.tsx','apps/extension/manifest.json','apps/api/app/main.py','apps/api/app/services/risk_engine.py','packages/detection-core/src/index.ts','infra/docker-compose.yml','apps/admin/app/page.tsx','docs/SECURITY.md','ml/README.md'];
+for(const file of required) if(!fs.existsSync(path.join(root,file))) throw new Error(`Missing ${file}`);
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'apps/extension/manifest.json'),'utf8'));
+if(manifest.manifest_version!==3) throw new Error('Extension must use MV3');
+if(manifest.host_permissions?.length) throw new Error('Expected no broad host_permissions');
+console.log('SafeScroll smoke test passed.');
